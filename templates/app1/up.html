@@ -1,0 +1,23 @@
+{% extends 'app1/main.html' %}
+{% block content %}
+<form action="/up/" method="get"> 
+<table border="2" width="100%">
+    <tr>
+        <td>RollNo</td>
+        <td><input type='text' name='rollno'></td>
+    </tr>
+    <tr>
+        <td>sub1</td>
+        <td><input type='text' name='sub1'></td>
+    </tr>
+    <tr>
+        <td>sub2</td>
+        <td><input type='text' name='sub2'></td>
+    </tr>
+    <tr>
+        <td><input type='submit' value='update' style="width:90px;border:none;border-radius:2px;padding:6px;background-color:rgb(6, 54, 4);font-family:'algerian';color:white" ></td>
+    </tr>
+</table>
+</form> 
+<p>{{msg}}</p>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'app1/main.html' %}
+
+{% block content %}
+<h2>Delete Marks</h2>
+<form action="/delete/" method="get">
+    <table border="2" width="100%">
+      <tr>
+        <td>RollNo</td>
+        <td><input type="text" name="rollno"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Delete" style="width:90px;border:none;border-radius:2px;padding:6px;background-color:rgb(6, 54, 4);font-family:'algerian';color:white"></td>
+      </tr>
+    </table>
+</form>  
+
+<!-- Display the message if there is one -->
+{% if msg %}
+    <p>{{ msg }}</p>
+{% else %}
+    <p>Please enter a roll number to delete the student record.</p>
+{% endif %}
+{% endblock %}
